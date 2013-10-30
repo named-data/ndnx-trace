@@ -1,0 +1,52 @@
+                              NDNx Trace 
+
+DEVEL
+
+  -----------
+  What is it?
+  -----------
+  The NDNx Trace is a tool with traceroute like functionality for NDNx. The NDNx
+  code can be obtained at www.ndnx.org/. This tools is written for
+  troubleshooting problems in a content centric network. This tool can trace to a certain
+  NDN URI, e.g, ndnx:/ndn/csu/netsec/index. This is an initial version of the
+  tool and would continue to improve.
+
+  ----------
+  Components
+  ----------
+  The tool consists of two tools. The server is called "ndn_traced" and the 
+  client "trace".
+
+  -------------------
+  The Latest Version
+  ------------------ 
+  The latest version for both the client and the server is 1.1.
+    
+  -------------    
+  Installation
+  ------------- 
+  Please see the file called INSTALL.  
+
+  -------------
+  Documentation
+  -------------
+  For running the tool on your machine or testbed, refer to docs/manual.
+
+  ----------
+  License
+  ----------
+  Please see the file called COPYING.
+
+  --------
+  Contacts
+  --------
+
+     o If you have any question regarding the code and the tool, please drop a 
+     mail to <susmit@cs.colostate.edu>
+     
+     o If you want to report an issue or a bug, do so at, 
+     https://code.google.com/p/ndnx-trace/issues/entry.
+     You can also drop a mail to the above mail id.
+
+     o Patches are appriciated. Please create an review request at the tracker
+     or send a mail to the above mail id.

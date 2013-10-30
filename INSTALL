@@ -1,0 +1,53 @@
+ SOURCE CODE
+ -----------
+ Source code can be checked out from ndnx-trace repository.
+
+ $ git clone https://code.google.com/p/ndnx-trace/
+
+ This would create a directory named ndnx-trace
+
+
+ INSTALLATION OVERVIEW
+ ---------------------------
+ It is recommended to install both server and client. However, they can be installed individually.
+
+    $ sh bootstrap.sh
+    $ ./configure
+    $ make
+    $ sudo make install
+
+
+ UNINSTALLATION
+ --------------
+ The program can be uninstalled using make uninstall.
+
+    $ cd ndnx-trace/source
+    $ sudo make uninstall
+
+
+ NON-STANDARD INSTALLATION OF NDNX
+ ---------------------------------
+ If ndnd is installed in a non-standard directory, 
+ 
+ a) Make sure the NDN_DIR in source/conf.h is set to your ndnx bin directory.
+ NDN_DIR = "/Downloads/ndnx-0.8.0/bin/"
+
+ b) For autoconf, use CFLAG (-I) to point to the ndn include directory
+ and LDFLAGS (-L) to point to the ndn lib directory.
+ 
+ $ sh bootstrap.sh
+ $ ./configure CFLAGS=-I/Downloads/ndnx-0.8.0/include LDFLAGS=-L/Downloads/ndnx-0.8.0/lib
+ $ make
+ $ make install
+
+IF YOU ARE USING UBUNTU
+------------------------------------
+There is a bug which needs the -lndn and -lcrypto order to be flipped. If the build fails,
+      change the orger in source/Makefile.am and rerun the process.
+            
+ NOTES
+ -----
+
+ o Make sure you have ndnx and openssl-devel installed. Otherwise the installation will fail.
+
+ o Please report installation issues at http://code.google.com/p/ndnx-trace/issues/
